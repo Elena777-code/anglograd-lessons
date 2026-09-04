@@ -117,6 +117,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
   filter:drop-shadow(0 6px 10px rgba(10,6,20,.35))}
 .pres-side{flex:1;display:flex;flex-direction:column;gap:1.6vh;align-items:flex-start;min-width:0}
 .brand-col{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1.2vh;width:100%;min-width:0;align-content:start}
+.brand-col.one-col{grid-template-columns:1fr}
 .brand-col .logo-card{display:flex;align-items:center;gap:1vw;text-align:left;padding:.3vh .6vw;
   background:#fff;border-radius:var(--radius);cursor:pointer;
   transition:transform .15s ease,box-shadow .2s ease;
@@ -275,7 +276,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <div class="pres-side">
       <div class="sound-chip f-yellow"><span class="snd">sss…</span><span class="hint">like</span><img class="chiplogo" src="logos/sprite.png" alt="sprite"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
-      <div class="brand-col">
+      <div class="brand-col one-col">
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/skittles.png" alt="Skittles logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">S</span>kittles</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/sprite.png" alt="Sprite logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">S</span>prite</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/samsung.png" alt="Samsung logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">S</span>amsung</span></div></div>
