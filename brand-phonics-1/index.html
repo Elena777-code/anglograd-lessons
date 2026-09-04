@@ -117,7 +117,10 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
   filter:drop-shadow(0 6px 10px rgba(10,6,20,.35))}
 .pres-side{flex:1;display:flex;flex-direction:column;gap:1.6vh;align-items:flex-start;min-width:0}
 .brand-col{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1.2vh;width:100%;min-width:0;align-content:start}
-.brand-col.one-col{grid-template-columns:1fr}
+.brand-col.one-col{grid-template-columns:1fr;gap:.7vh}
+.brand-col.one-col .logo-card{padding-top:0;padding-bottom:0}
+.brand-col.one-col .imgbox{height:clamp(60px,9vh,104px)}
+.brand-col.one-col.many .imgbox{height:clamp(50px,8vh,92px)} /* 6 stacked boxes: extra slim so nothing hides behind the nav */
 .brand-col .logo-card{display:flex;align-items:center;gap:1vw;text-align:left;padding:.3vh .6vw;
   background:#fff;border-radius:var(--radius);cursor:pointer;
   transition:transform .15s ease,box-shadow .2s ease;
@@ -295,7 +298,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <div class="pres-side">
       <div class="sound-chip f-yellow"><span class="snd dotted">i-i-i…</span><span class="hint">like</span><img class="chiplogo" src="logos/instagram.png" alt="instagram"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
-      <div class="brand-col">
+      <div class="brand-col one-col">
     <div class="logo-card v" role="button" tabindex="0"><div class="imgbox"><img src="logos/instagram.png" alt="Instagram logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">I</span>nstagram</span></div></div>
     <div class="logo-card v" role="button" tabindex="0"><div class="imgbox"><img src="logos/igloo.svg" alt="Igloo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">i</span>gloo</span></div></div>
     <div class="logo-card v" role="button" tabindex="0"><div class="imgbox"><img src="logos/infiniti.svg" alt="Infinity emblem"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">I</span>nfinity</span></div></div>
@@ -332,7 +335,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <div class="pres-side">
       <div class="sound-chip f-yellow"><span class="snd">t-t-t…</span><span class="hint">like</span><img class="chiplogo" src="logos/tiktok.png" alt="tiktok"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
-      <div class="brand-col">
+      <div class="brand-col one-col">
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/tiktok.png" alt="TikTok logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">T</span>ik<span class="hl">T</span>ok</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/tesla.png" alt="Tesla logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">T</span>esla</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/toyota.png" alt="Toyota logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">T</span>oyota</span></div></div>
@@ -374,7 +377,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <div class="pres-side">
       <div class="sound-chip f-yellow"><span class="snd">p-p-p…</span><span class="hint">like</span><img class="chiplogo" src="logos/pepsi.png" alt="pepsi"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
-      <div class="brand-col">
+      <div class="brand-col one-col many">
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/pepsi.png" alt="Pepsi logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">P</span>epsi</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/playstation.png" alt="PlayStation logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">P</span>layStation</span></div></div>
     <div class="logo-card c" role="button" tabindex="0"><div class="imgbox"><img src="logos/porsche.png" alt="Porsche logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">P</span>orsche</span></div></div>
@@ -416,7 +419,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <div class="pres-side">
       <div class="sound-chip f-yellow"><span class="snd">a-a-a…</span><span class="hint">like</span><img class="chiplogo" src="logos/apple.png" alt="apple"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
-      <div class="brand-col">
+      <div class="brand-col one-col">
     <div class="logo-card v" role="button" tabindex="0"><div class="imgbox"><img src="logos/apple.png" alt="Apple logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">A</span>pple</span></div></div>
       </div>
     </div>
