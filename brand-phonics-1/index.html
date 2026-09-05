@@ -118,8 +118,10 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
 .pres-side{flex:1;display:flex;flex-direction:column;gap:1.6vh;align-items:flex-start;min-width:0}
 .brand-col{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:1.2vh;width:100%;min-width:0;align-content:start}
 .brand-col.one-col{grid-template-columns:1fr}
-.brand-col.stack{grid-template-columns:1fr;gap:.9vh;justify-items:start}
-.brand-col.stack .logo-card{width:max-content;max-width:100%;padding-top:0;padding-bottom:0}
+.brand-col.stack{grid-template-columns:max-content;gap:.9vh}
+.brand-col.stack .logo-card{padding-top:0;padding-bottom:0}
+.brand-col.stack .logo-card .nm{display:block;visibility:hidden;height:0;overflow:hidden} /* hidden words still set the box width — all boxes equal, no jump on reveal */
+.brand-col.stack .logo-card.show .nm{visibility:visible;height:auto}
 .brand-col.stack.tall5 .imgbox{height:clamp(56px,8.5vh,100px)}
 .brand-col.stack.many .imgbox{height:clamp(48px,7.2vh,86px)}
 .brand-col .logo-card{display:flex;align-items:center;gap:1vw;text-align:left;padding:.3vh .6vw;
