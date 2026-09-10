@@ -110,6 +110,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
 .brand-col .logo-card:hover{transform:translateY(-4px) rotate(-.6deg)}
 .brand-col .logo-card .imgbox{flex:none;height:clamp(36px,6vh,68px);width:clamp(104px,12vw,180px);margin:0;
   display:flex;align-items:center;justify-content:center}
+.brand-col .logo-card .imgbox.big{height:clamp(52px,8.5vh,96px);width:clamp(150px,17vw,260px)}
 .brand-col .logo-card img{max-width:100%;max-height:100%;object-fit:contain}
 .brand-col .logo-card .namebox{flex:1;min-height:0;align-items:flex-start;
   display:flex;flex-direction:column;justify-content:center;gap:2px}
@@ -204,6 +205,22 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
   border-right:3px solid #221B30;border-bottom:3px solid #221B30;
   transform:rotate(45deg) skew(12deg,12deg);
 }
+/* iguana probe (2026-09-10): tap reveals the word — a look, never a judge */
+.iguana-card{align-self:center;margin:auto;position:relative;background:#fff;border-radius:var(--radius);
+  padding:1.6vh 2vw;display:flex;flex-direction:column;align-items:center;gap:.8vh;
+  cursor:pointer;user-select:none;-webkit-user-select:none;
+  box-shadow:0 12px 32px rgba(10,6,20,.38);border:3px solid rgba(255,255,255,.95);
+  transition:transform .15s ease}
+.iguana-card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.iguana-card img{height:clamp(150px,34vh,300px);width:auto}
+.iguana-card .q{font-weight:600;color:var(--ink-dark-soft);
+  border:3px dashed rgba(34,27,48,.4);border-radius:99px;padding:.12em .55em;
+  font-size:clamp(1.4rem,2.6vw,2.2rem)}
+.iguana-card .nm{display:none;font-weight:800;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.1}
+.iguana-card .nm .v{color:var(--pink-ink)}
+.iguana-card .nm .c{color:var(--cyan-ink)}
+.iguana-card.show .q{display:none}
+.iguana-card.show .nm{display:block;animation:pip .45s cubic-bezier(.34,1.56,.64,1)}
 @media (max-width:900px){
   .story-wrap{grid-template-columns:1fr}
   .pres-row{flex-direction:column;height:auto;min-height:0}
@@ -222,19 +239,15 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
       <img class="glyph" src="genki-letters/n.png?v=2" alt="letter n">
     </div>
     <div class="pres-side">
-      <div class="sound-chip f-yellow"><span class="snd">n-n-n…</span><span class="hint">like</span><img class="chiplogo" src="logos/nesquik.svg" alt="nesquik"></div>
+      <div class="sound-chip f-yellow"><span class="snd">n-n-n…</span><span class="hint">like</span><img class="chiplogo" src="logos/nike.png" alt="nike"></div>
       <div class="task" style="margin-top:0">🖐 Tap the letter — trace it in the air!</div>
       <div class="brand-col">
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/netflix.png" alt="Netflix logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>etflix</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nutella.svg" alt="Nutella logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">n</span>utella</span></div></div>
+        <div class="logo-card" role="button" tabindex="0"><div class="imgbox big"><img src="logos/nutella.svg" alt="Nutella logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">n</span>utella</span></div></div>
         <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nike.png" alt="Nike logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>ike</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nintendo.svg" alt="Nintendo logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>intendo</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nickelodeon.svg" alt="Nickelodeon logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>ickelodeon</span></div></div>
+        <div class="logo-card" role="button" tabindex="0"><div class="imgbox big"><img src="logos/nintendo.svg" alt="Nintendo logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>intendo</span></div></div>
         <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nissan.svg" alt="Nissan logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>issan</span></div></div>
         <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nesquik.svg" alt="Nesquik logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>esquik</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nikastyle.svg" alt="Nikastyle logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">n</span>ikastyle</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/newbalance.svg" alt="New Balance logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>ew Balance</span></div></div>
-        <div class="logo-card" role="button" tabindex="0"><div class="imgbox"><img src="logos/nestle.svg" alt="Nestle logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>estlé</span></div></div>
+        <div class="logo-card" role="button" tabindex="0"><div class="imgbox big"><img src="logos/nestle.svg" alt="Nestle logo"></div><div class="namebox"><span class="q">?</span><span class="nm"><span class="hl">N</span>estlé</span></div></div>
       </div>
     </div>
   </div>
@@ -251,7 +264,7 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <button class="know-pill" data-snd="t" aria-label="t — TikTok"><span class="pc">t</span><img src="logos/tiktok.png" alt="TikTok logo"></button>
     <button class="know-pill" data-snd="p" aria-label="p — Pepsi"><span class="pc">p</span><img src="logos/pepsi.png" alt="Pepsi logo"></button>
     <button class="know-pill" data-snd="a" aria-label="a — Apple"><span class="pv">a</span><img src="logos/apple.png" alt="Apple logo"></button>
-    <button class="know-pill" data-snd="n" aria-label="n — Nesquik"><span class="pn2">n</span><img src="logos/nesquik.svg" alt="Nesquik logo"></button>
+    <button class="know-pill" data-snd="n" aria-label="n — Nike"><span class="pn2">n</span><img src="logos/nike.png" alt="Nike logo"></button>
   </div>
   <div class="read-row reveal">
     <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="v">a</span><span class="c">n</span></div><div class="pic"><span class="q">?</span><span class="emo">🍊</span></div></div>
@@ -308,8 +321,22 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
     <button class="know-pill" data-snd="t" aria-label="t — TikTok"><span class="pc">t</span><img src="logos/tiktok.png" alt="TikTok logo"></button>
     <button class="know-pill" data-snd="p" aria-label="p — Pepsi"><span class="pc">p</span><img src="logos/pepsi.png" alt="Pepsi logo"></button>
     <button class="know-pill" data-snd="a" aria-label="a — Apple"><span class="pv">a</span><img src="logos/apple.png" alt="Apple logo"></button>
-    <button class="know-pill" data-snd="n" aria-label="n — Nesquik"><span class="pn2">n</span><img src="logos/nesquik.svg" alt="Nesquik logo"></button>
+    <button class="know-pill" data-snd="n" aria-label="n — Nike"><span class="pn2">n</span><img src="logos/nike.png" alt="Nike logo"></button>
   </div>
+</section>
+
+<!-- 6 · IGUANA — the probe (Elena, 2026-09-10: find out if they know iguana —
+     the candidate i-brand to replace Instagram later) -->
+<section class="slide">
+  <div class="eyebrow reveal">Look! A new friend</div>
+  <h1 class="reveal">Do you know it?</h1>
+  <div class="rule reveal"></div>
+  <div class="iguana-card reveal" role="button" tabindex="0" aria-label="iguana — tap to show the word">
+    <img src="logos/iguana.svg" alt="an iguana">
+    <span class="q">?</span>
+    <span class="nm"><span class="v">i</span><span class="c">g</span><span class="v">u</span><span class="v">a</span><span class="c">n</span><span class="v">a</span></span>
+  </div>
+  <div class="task reveal">🎯 Tap! What is it?</div>
 </section>
 
 <nav id="nav">
@@ -401,6 +428,8 @@ document.addEventListener('click',e=>{
     if(read.dataset.snd)speak(read.dataset.snd);
     return;
   }
+  const ig=e.target.closest('.iguana-card');
+  if(ig){ig.classList.toggle('show');return;}
   const pill=e.target.closest('.know-pill');
   if(pill){speak(pill.dataset.snd);return;}
   if(e.target.closest('#canread')){document.getElementById('ckbox').textContent='✓';return;}
