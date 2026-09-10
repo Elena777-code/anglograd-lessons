@@ -205,18 +205,25 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
   border-right:3px solid #221B30;border-bottom:3px solid #221B30;
   transform:rotate(45deg) skew(12deg,12deg);
 }
-/* iguana probe (2026-09-10): tap reveals the word — a look, never a judge */
-.iguana-card{align-self:center;margin:auto;position:relative;background:#fff;border-radius:var(--radius);
-  padding:1.6vh 2vw;display:flex;flex-direction:column;align-items:center;gap:.8vh;
+/* iguana slide v2 (Elena, 2026-09-10): HER photo as the full-screen
+   picture; the drawn iguana is demoted to the logo-letter hint chip.
+   A look, never a judge — the word reveals silently on tap. */
+.iguana-slide{position:relative;overflow:hidden;padding:0}
+.iguana-slide .iguana-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.iguana-slide .iguana-veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(10,6,20,.45) 0%,rgba(10,6,20,0) 32%,rgba(10,6,20,0) 55%,rgba(10,6,20,.55) 100%)}
+.iguana-title{position:absolute;top:3.2vh;left:0;right:0;z-index:2;text-align:center;color:#fff;
+  font-weight:800;font-size:clamp(2rem,4.6vw,3.8rem);text-shadow:0 3px 22px rgba(10,6,20,.6);margin:0}
+.iguana-hint{position:absolute;top:4vh;left:2.2vw;z-index:3}
+.iguana-card{position:absolute;bottom:7vh;left:50%;transform:translateX(-50%);z-index:3;
+  background:#fff;border-radius:99px;padding:1.2vh 2.4vw;display:flex;align-items:center;
   cursor:pointer;user-select:none;-webkit-user-select:none;
-  box-shadow:0 12px 32px rgba(10,6,20,.38);border:3px solid rgba(255,255,255,.95);
-  transition:transform .15s ease}
-.iguana-card:hover{transform:translateY(-4px) rotate(-.6deg)}
-.iguana-card img{height:clamp(150px,34vh,300px);width:auto}
+  box-shadow:0 12px 32px rgba(10,6,20,.38);transition:transform .15s ease}
+.iguana-card:hover{transform:translateX(-50%) scale(1.05)}
 .iguana-card .q{font-weight:600;color:var(--ink-dark-soft);
-  border:3px dashed rgba(34,27,48,.4);border-radius:99px;padding:.12em .55em;
-  font-size:clamp(1.4rem,2.6vw,2.2rem)}
-.iguana-card .nm{display:none;font-weight:800;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1.1}
+  border:3px dashed rgba(34,27,48,.4);border-radius:99px;padding:.1em .5em;
+  font-size:clamp(1.6rem,3vw,2.6rem)}
+.iguana-card .nm{display:none;font-weight:800;font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.1}
 .iguana-card .nm .v{color:var(--pink-ink)}
 .iguana-card .nm .c{color:var(--cyan-ink)}
 .iguana-card.show .q{display:none}
@@ -387,17 +394,17 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
 </section>
 
 <!-- 8 · IGUANA — the probe (Elena, 2026-09-10: find out if they know iguana —
-     the candidate i-brand to replace Instagram later) -->
-<section class="slide">
-  <div class="eyebrow reveal">Look! A new friend</div>
-  <h1 class="reveal">Do you know it?</h1>
-  <div class="rule reveal"></div>
+     the candidate i-brand to replace Instagram later). HER photo as the
+     full-screen picture; the drawn iguana sits in the i-hint chip. -->
+<section class="slide iguana-slide">
+  <img class="iguana-photo" src="logos/iguana-photo.jpg" alt="an iguana">
+  <div class="iguana-veil"></div>
+  <h1 class="iguana-title">Do you know it?</h1>
+  <div class="iguana-hint"><div class="sound-chip f-yellow"><span class="snd">i-i-i…</span><span class="hint">like</span><img class="chiplogo" src="logos/iguana.svg" alt="iguana"></div></div>
   <div class="iguana-card reveal" role="button" tabindex="0" aria-label="iguana — tap to show the word">
-    <img src="logos/iguana.svg" alt="an iguana">
     <span class="q">?</span>
     <span class="nm"><span class="v">i</span><span class="c">g</span><span class="v">u</span><span class="v">a</span><span class="c">n</span><span class="v">a</span></span>
   </div>
-  <div class="task reveal">🎯 Tap! What is it?</div>
 </section>
 
 <nav id="nav">
