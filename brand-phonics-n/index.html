@@ -221,6 +221,11 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
 .iguana-card .nm .c{color:var(--cyan-ink)}
 .iguana-card.show .q{display:none}
 .iguana-card.show .nm{display:block;animation:pip .45s cubic-bezier(.34,1.56,.64,1)}
+/* revision slides (2026-09-10): wider cards so a sentence fits */
+.sent-row{display:flex;flex-wrap:wrap;gap:1.6vh 1.2vw;align-content:start}
+.sent-row .read-card{width:clamp(170px,17.5vw,260px)}
+.sent-row .read-card .wrd{font-size:clamp(1.15rem,2.1vw,1.9rem);line-height:1.35}
+.read-card .wrd .sight{color:var(--orange)}
 @media (max-width:900px){
   .story-wrap{grid-template-columns:1fr}
   .pres-row{flex-direction:column;height:auto;min-height:0}
@@ -325,7 +330,63 @@ h1 .spray::before{content:'';position:absolute;inset:0;z-index:-1;
   </div>
 </section>
 
-<!-- 6 · IGUANA — the probe (Elena, 2026-09-10: find out if they know iguana —
+<!-- 6 · READ AGAIN — revision: every word from the text-1 strips, pictures behind the taps -->
+<section class="slide soft">
+  <div class="eyebrow reveal">Revise! All our words</div>
+  <h1 class="reveal">Read again!</h1>
+  <div class="rule reveal"></div>
+  <div class="read-row reveal">
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">s</span><span class="v">i</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">💺</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="v">i</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">👉</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">s</span><span class="v">i</span><span class="c">t</span><span class="c">s</span></div><div class="pic"><span class="q">?</span><span class="emo"><img class="inpic" src="logos/cat-sitting.svg" alt="the cat sits"></span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">p</span><span class="v">i</span><span class="c">p</span></div><div class="pic"><span class="q">?</span><span class="emo">🍉</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">p</span><span class="v">i</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">🍑</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">s</span><span class="v">i</span><span class="c">p</span></div><div class="pic"><span class="q">?</span><span class="emo">🥤</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">s</span><span class="c">p</span><span class="v">i</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo"><img class="inpic" src="logos/spit-monkey.png" alt="the monkey spits"></span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="v">a</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">🎯</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">p</span><span class="v">a</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">🐶</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">t</span><span class="v">a</span><span class="c">p</span></div><div class="pic"><span class="q">?</span><span class="emo">👆</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">p</span><span class="v">a</span><span class="c">t</span><span class="c">s</span></div><div class="pic"><span class="q">?</span><span class="emo">🐕</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">s</span><span class="v">a</span><span class="c">t</span></div><div class="pic"><span class="q">?</span><span class="emo">🛋</span></div></div>
+  </div>
+  <div class="task reveal">🎯 Read it, then tap!</div>
+  <div class="know-row reveal" style="margin-top:auto">
+    <span class="know-lbl">we know:</span>
+    <button class="know-pill" data-snd="s" aria-label="s — Sprite"><span class="pc">s</span><img src="logos/sprite.png" alt="Sprite logo"></button>
+    <button class="know-pill" data-snd="i" aria-label="i — Instagram"><span class="pv">i</span><img src="logos/instagram.png" alt="Instagram logo"></button>
+    <button class="know-pill" data-snd="t" aria-label="t — TikTok"><span class="pc">t</span><img src="logos/tiktok.png" alt="TikTok logo"></button>
+    <button class="know-pill" data-snd="p" aria-label="p — Pepsi"><span class="pc">p</span><img src="logos/pepsi.png" alt="Pepsi logo"></button>
+    <button class="know-pill" data-snd="a" aria-label="a — Apple"><span class="pv">a</span><img src="logos/apple.png" alt="Apple logo"></button>
+    <button class="know-pill" data-snd="n" aria-label="n — Nike"><span class="pn2">n</span><img src="logos/nike.png" alt="Nike logo"></button>
+  </div>
+</section>
+
+<!-- 7 · SILLY SENTENCES — revision reading: only strip words + the sight words -->
+<section class="slide soft">
+  <div class="eyebrow reveal">New sentences — you can read them!</div>
+  <h1 class="reveal">Silly sentences!</h1>
+  <div class="rule reveal"></div>
+  <div class="sent-row reveal">
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">S</span><span class="v">i</span><span class="c">t</span>, <span class="c">P</span><span class="v">a</span><span class="c">t</span>!</div><div class="pic"><span class="q">?</span><span class="emo">🐜</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="sight">I</span> <span class="c">t</span><span class="v">a</span><span class="c">p</span> <span class="c">P</span><span class="v">a</span><span class="c">t</span>.</div><div class="pic"><span class="q">?</span><span class="emo">👆🐜</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">P</span><span class="v">a</span><span class="c">t</span> <span class="c">s</span><span class="v">i</span><span class="c">t</span><span class="c">s</span>.</div><div class="pic"><span class="q">?</span><span class="emo">🐜🪑</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">S</span><span class="v">i</span><span class="c">t</span> <span class="v">i</span><span class="c">n</span> <span class="sight">the</span> <span class="c">t</span><span class="v">i</span><span class="c">n</span>!</div><div class="pic"><span class="q">?</span><span class="emo"><img class="inpic" src="logos/cat-in-box.svg" alt="in the box"></span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="c">N</span><span class="v">a</span><span class="c">p</span>, <span class="c">P</span><span class="v">a</span><span class="c">t</span>, <span class="c">n</span><span class="v">a</span><span class="c">p</span>!</div><div class="pic"><span class="q">?</span><span class="emo">😴🐜</span></div></div>
+    <div class="read-card" role="button" tabindex="0"><div class="wrd"><span class="sight">I</span> <span class="c">s</span><span class="c">p</span><span class="v">i</span><span class="c">t</span>.</div><div class="pic"><span class="q">?</span><span class="emo"><img class="inpic" src="logos/spit-monkey.png" alt="the monkey spits"></span></div></div>
+  </div>
+  <div class="task reveal">🎯 Read first, then tap!</div>
+  <div class="know-row reveal" style="margin-top:auto">
+    <span class="know-lbl">we know:</span>
+    <button class="know-pill" data-snd="s" aria-label="s — Sprite"><span class="pc">s</span><img src="logos/sprite.png" alt="Sprite logo"></button>
+    <button class="know-pill" data-snd="i" aria-label="i — Instagram"><span class="pv">i</span><img src="logos/instagram.png" alt="Instagram logo"></button>
+    <button class="know-pill" data-snd="t" aria-label="t — TikTok"><span class="pc">t</span><img src="logos/tiktok.png" alt="TikTok logo"></button>
+    <button class="know-pill" data-snd="p" aria-label="p — Pepsi"><span class="pc">p</span><img src="logos/pepsi.png" alt="Pepsi logo"></button>
+    <button class="know-pill" data-snd="a" aria-label="a — Apple"><span class="pv">a</span><img src="logos/apple.png" alt="Apple logo"></button>
+    <button class="know-pill" data-snd="n" aria-label="n — Nike"><span class="pn2">n</span><img src="logos/nike.png" alt="Nike logo"></button>
+  </div>
+</section>
+
+<!-- 8 · IGUANA — the probe (Elena, 2026-09-10: find out if they know iguana —
      the candidate i-brand to replace Instagram later) -->
 <section class="slide">
   <div class="eyebrow reveal">Look! A new friend</div>
